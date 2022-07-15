@@ -58,10 +58,10 @@
 
 <div class="row">
   <div class="column">
-    <img src="img_snow.jpg" alt="Snow" style="width:100%">
+    <img src="https://github.com/khasaad/Training_a_Custom_PyTorch_Classifier_on_Medical_MNIST_Dataset/blob/main/outputs/accuracy.png" alt="Accuracy graph after training the model on the dataset" style="width:100%">
   </div>
   <div class="column">
-    <img src="img_forest.jpg" alt="Forest" style="width:100%">
+    <img src="https://github.com/khasaad/Training_a_Custom_PyTorch_Classifier_on_Medical_MNIST_Dataset/blob/main/outputs/loss.png" alt="Model Training Loss Graph" style="width:100%">
   </div>
 </div>
 
