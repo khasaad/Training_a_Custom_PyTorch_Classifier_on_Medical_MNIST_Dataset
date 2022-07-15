@@ -35,3 +35,34 @@
 <p>Finally, added pooling average and that it is effective when we want to detect weak signals.</p>
 
 <p>In this case, the stride and the size of the kernel are automatically selected to adapt to the needs.</p>
+
+<h3>Model training</h3>
+
+<p>First, we define the training hyperparameters. The learning rate reflects the degree to which the model is updated in batches. In our model, it is equal to 0.001, the training time lasted 17.5 hours (Compute device: CPU). We cannot adjust the learning rate too large, the weights will be adjusted too much and will miss the true minimum loss, or even become unstable.</p>
+
+<p>We have defined 20 epochs to train the model. An epoch corresponds to learning on all the data.</p>
+
+<p>We divide the data into 70% training, 20% validation, and 10% testing.</p>
+
+<p>We use validation data to avoid overtraining in our model. Training and validation data are taken from the same dataset. Therefore, the model should have a similar loss for both.</p>
+
+<p>Next, we cycle through the batches. We exclude the information accumulated in the optimizer, feed the batch by the model and calculate the loss for a batch. We use cross entropy (calculating the difference between two probability distributions), a common metric for classifiers.</p>
+
+<p>This loss is added to a running total for the time, and then we apply Backpropagation. The optimizer then takes a step and updates the weights.</p>
+
+<p>After all the training batches are complete, the same process happens for the validation data, without the backpropagation and optimization steps.</p>
+
+<p>The average loss is calculated and we compare the validation loss against the training loss to test overfitting.</p>
+
+<p>Here we obtain very good results for such a simple model. The final validation loss is 0.003 and the validation accuracy is 99.89%. This means that the model predicts almost everything correctly.</p>
+
+<div class="row">
+  <div class="column">
+    <img src="img_snow.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="img_forest.jpg" alt="Forest" style="width:100%">
+  </div>
+</div>
+
+<p>The graphs also show minimal fluctuations in the lines. It seems like it's practically possible to get 100% validation accuracy with a bit more training by using a learning rate planner.</p>
