@@ -1,5 +1,5 @@
 # Training a Custom PyTorch Classifier on Medical MNIST Dataset
-
+<p>This project is a solution to one of the projects at <a href="https://www.nvidia.com/fr-fr/">Nvidia</a></p>
 <p><B>Key words</B>: Classification radio images, PyTorch, CNN, MNIST Medical dataset</p>
 
 <h3>Context of the project</h3>
