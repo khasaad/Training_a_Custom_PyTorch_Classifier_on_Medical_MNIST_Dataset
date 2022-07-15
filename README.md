@@ -1,6 +1,6 @@
 # Training_a_Custom_PyTorch_Classifier_on_Medical_MNIST_Dataset
 
-<p>Key words: Classification radio images, PyTorch, CNN, MNIST Medical dataset/p>
+<p><B>Key words</B>: Classification radio images, PyTorch, CNN, MNIST Medical dataset</p>
 
 <h3>Context of the project</h3>
 
